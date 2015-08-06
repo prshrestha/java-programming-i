@@ -14,15 +14,16 @@ public class Variance {
 
     // Copy here average from exercise 64 
     public static double average(ArrayList<Integer> list) {
-        return (double) sum(list) / list.size();
+        return (sum(list) * 1.0) / list.size();
     }
 
     public static double variance(ArrayList<Integer> list) {
         double var = 0;
         for (int num : list) {
-            var = Math.pow(num - average(list), 2);
+            var = Math.pow(num * 1.0 - average(list), 2);
         }
-        return var / (list.size() - 1);
+        var = var / (list.size() - 1);
+        return var;
     }
 
     public static void main(String[] args) {
