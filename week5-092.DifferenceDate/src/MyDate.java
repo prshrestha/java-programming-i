@@ -1,4 +1,6 @@
+
 public class MyDate {
+
     private int day;
     private int month;
     private int year;
@@ -30,4 +32,17 @@ public class MyDate {
         return false;
     }
 
+    public int differenceInYears(MyDate comparedDate) {
+        double yearDiff = 0.00;
+        if (this.year > comparedDate.year) {
+            yearDiff = (this.year + (double) this.month / 12 + (double) this.day / 365)
+                    - (comparedDate.year + (double) comparedDate.month / 12
+                    + (double) comparedDate.day / 365);
+        } else {
+            yearDiff = (comparedDate.year + (double) comparedDate.month / 12
+                    + (double) comparedDate.day / 365)
+                    - (this.year + (double) this.month / 12 + (double) this.day / 365);
+        }
+        return (int) yearDiff;
+    }
 }

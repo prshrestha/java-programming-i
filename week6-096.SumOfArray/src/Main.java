@@ -8,7 +8,10 @@ public class Main {
     }
 
     public static int sum(int[] array) {
-        // Write code here
-        return 0;
+        int sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        return sum;
     }
 }

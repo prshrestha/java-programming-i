@@ -10,6 +10,5 @@ public class Main {
             System.out.println(dice.roll());
             i++;
         }
-
     }
 }
