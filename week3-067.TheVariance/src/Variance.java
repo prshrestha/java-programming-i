@@ -19,11 +19,13 @@ public class Variance {
 
     public static double variance(ArrayList<Integer> list) {
         double var = 0;
+        double total = 0;
         for (int num : list) {
             var = Math.pow(num * 1.0 - average(list), 2);
+            total += var;
         }
-        var = var / (list.size() - 1);
-        return var;
+        total = total / (list.size() - 1);
+        return total;
     }
 
     public static void main(String[] args) {
