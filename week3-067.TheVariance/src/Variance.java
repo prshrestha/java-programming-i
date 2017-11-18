@@ -20,8 +20,9 @@ public class Variance {
     public static double variance(ArrayList<Integer> list) {
         double var = 0;
         double total = 0;
+        double average = average(list);
         for (int num : list) {
-            var = Math.pow(num * 1.0 - average(list), 2);
+            var = Math.pow((num * 1.0 - average), 2);
             total += var;
         }
         total = total / (list.size() - 1);
