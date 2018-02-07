@@ -25,13 +25,14 @@ public class HangmanLogic {
 
     public void guessLetter(String letter) {
         // program here the functionality for making a guess
-        if (this.guessedLetters.contains(letter)) {
-            return;
+        if(guessedLetters.contains(letter)){
+            
+        } else if (word.contains(letter)){
+            guessedLetters += letter;
+        }else{
+            numberOfFaults++;
+            guessedLetters += letter;
         }
-        if (!this.word.contains(letter)) {
-            this.numberOfFaults++;
-        }
-        this.guessedLetters += letter;
 
         // if the letter has already been guessed, nothing happens
         // it the word does not contains the guessed letter, number of faults increase
