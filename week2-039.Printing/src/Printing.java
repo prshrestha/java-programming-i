@@ -2,33 +2,26 @@
 public class Printing {
 
     public static void printStars(int amount) {
-        int i = 0;
-        while (i < amount) {
+        for (int i = 0; i < amount; i++) {
             System.out.print("*");
-            i++;
         }
         System.out.println("");
     }
 
     public static void printSquare(int sideSize) {
-        int i = 0;
-        while (i < sideSize) {
+        for (int i = 0; i < sideSize; i++) {
             printStars(sideSize);
-            i++;
         }
     }
 
     public static void printRectangle(int width, int height) {
-        int i = 0;
-        while (i < height) {
+        for (int i = 0; i < height; i++) {
             printStars(width);
-            i++;
         }
     }
 
     public static void printTriangle(int size) {
-        int i = 1;
-        while (i <= size) {
+        for (int i = 1; i <= size; i++) {
             printStars(i);
             i++;
         }
